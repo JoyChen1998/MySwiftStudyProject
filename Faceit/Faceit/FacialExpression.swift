@@ -23,10 +23,10 @@ struct FacialExpression {
         case smile
         
         var sadder: Mouth {
-            return Mouth(rawValue: rawValue-1) ?? .frown
+            return Mouth(rawValue: rawValue+1) ?? .frown
         }
         var happier: Mouth{
-            return Mouth(rawValue: rawValue+1) ?? .smile
+            return Mouth(rawValue: rawValue-1) ?? .smile
         }
     }
 
