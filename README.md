@@ -11,7 +11,7 @@
 ### 简易计算器(Calculator)
 + features
 
- 整数戴加减法，开方和三角函数cos计算，你可在此基础上增加
+  整数戴加减法，开方和三角函数cos计算，你可在此基础上增加
  
 ### UI画笑脸  (Faceit)
 + features
