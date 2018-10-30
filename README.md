@@ -7,7 +7,8 @@
 使用需要自行创建project，然后再引用apps中的文件，记得看Main.storyboard中的ViewController调用的是哪个class，并不是自带的` ViewController.swift `。
 
 ---
-样例：
+
+## 样例
 ### 简易计算器(Calculator)
 + features
 
@@ -27,9 +28,9 @@
 ### 从网络获取图片 (Cassini)
 + features
 
- 支持scrollview的zoom --29/10/2018
+  支持scrollview的zoom --29/10/2018
  
- 不支持通过scroll 进行移动图片
+  不支持通过scroll 进行移动图片
 
 ...
 
