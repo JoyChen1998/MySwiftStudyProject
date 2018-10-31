@@ -18,11 +18,11 @@ class ImageViewController: UIViewController {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.addSubview(imageView)
-        imageURL = DemoURL.MyFavorite
-    }
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        view.addSubview(imageView)
+//        imageURL = DemoURL.MyFavorite
+//    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -43,12 +43,21 @@ class ImageViewController: UIViewController {
     }
     
     
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     // fetch images on the Internet
+    
+    
+    
     private func fetchImage() {
         if let url = imageURL {
-            let urlContents = try? Data(contentsOf: url)
-            if let imageData = urlContents {
-                image = UIImage(data: imageData)
+            spinner.startAnimating()
+            DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+                let urlContents = try? Data(contentsOf: url)
+                if let imageData = urlContents, url == self?.imageURL {
+                    DispatchQueue.main.async {
+                        self?.image = UIImage(data: imageData)
+                    }
+                }
             }
         }
     }
@@ -64,6 +73,7 @@ class ImageViewController: UIViewController {
             imageView.image = newValue
             imageView.sizeToFit()
             scrollView?.contentSize = imageView.frame.size
+            spinner?.startAnimating()
         }
     }
 }
