@@ -47,7 +47,7 @@ class ImageViewController: UIViewController {
     // fetch images on the Internet
     
     
-    
+    // Use Async function , let fetch action do not in queue.(DispatchQueue)
     private func fetchImage() {
         if let url = imageURL {
             spinner.startAnimating()
@@ -72,8 +72,8 @@ class ImageViewController: UIViewController {
         set {
             imageView.image = newValue
             imageView.sizeToFit()
-            scrollView?.contentSize = imageView.frame.size
-            spinner?.startAnimating()
+            scrollView?.contentSize = imageView.frame.size     // set contentsize -> can scroll all image
+            spinner?.stopAnimating()                           // when show images , stop spinner's animation
         }
     }
 }
