@@ -18,30 +18,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="3K7-7d-3LQ">
-                                <rect key="frame" x="125" y="114" width="125" height="439"/>
+                                <rect key="frame" x="116" y="114" width="143" height="439"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ed9-7K-b4z">
-                                        <rect key="frame" x="0.0" y="0.0" width="125" height="136.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="143" height="136.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" title="Earth"/>
+                                        <state key="normal" title="Picture1"/>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="showDetail" identifier="Earth" id="8te-cu-sYT"/>
+                                            <segue destination="BYZ-38-t0r" kind="showDetail" identifier="picture1" id="8te-cu-sYT"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOT-s0-yoh">
-                                        <rect key="frame" x="0.0" y="151.5" width="125" height="136"/>
+                                        <rect key="frame" x="0.0" y="151.5" width="143" height="136"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" title="Cassini"/>
+                                        <state key="normal" title="Picture2"/>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="showDetail" identifier="Cassini" id="9lB-aD-oLU"/>
+                                            <segue destination="BYZ-38-t0r" kind="showDetail" identifier="picture2" id="9lB-aD-oLU"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p4n-Tk-uFQ">
-                                        <rect key="frame" x="0.0" y="302.5" width="125" height="136.5"/>
+                                        <rect key="frame" x="0.0" y="302.5" width="143" height="136.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <state key="normal" title="Saturn"/>
+                                        <state key="normal" title="Picture3"/>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="showDetail" identifier="Saturn" id="pM5-cm-Urm"/>
+                                            <segue destination="BYZ-38-t0r" kind="showDetail" identifier="picture3" id="pM5-cm-Urm"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -131,6 +131,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hl0-cs-1sQ"/>
+        <segue reference="pM5-cm-Urm"/>
     </inferredMetricsTieBreakers>
 </document>
