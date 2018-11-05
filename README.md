@@ -1,6 +1,6 @@
 # MySwiftStudyProject
 
-这是我记录的一些学习Swift时，照着做的一些简易app样例。学习的课程来自 Stanford University 公开课
+这是我记录的一些学习Swift时，照着做的一些简易app样例。学习的课程来自 Stanford 公开课CS193p  
 
 版本： ` Swift 4 ` , ` Xcode 10 `
 
