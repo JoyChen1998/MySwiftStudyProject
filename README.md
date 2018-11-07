@@ -35,8 +35,12 @@
 	支持MultiThreading,点击图片不会因为下载图片而造成在Queue中等待(已将图片换为我站demo，因为课程中的图片下载太慢) --1/11/2018
 	
 ### Twitter Client Demo (Smashtag)
-+ Note: 因为CS193p课程中无Twitter部分的代码，该demo无法完整完成。我clone了GitHub上的 mahkeeoh/Smashtag/ 的部分代码。存在因为代码版本稍微低以及别的一些原因可能引起无法正常运行
++ Note: 因为CS193p课程中无Twitter部分的代码，该demo无法完整完成。我clone了GitHub上的 mahkeeoh/Smashtag/ 的Twitter部分代码。可能存在因为其代码版本稍低以及别的一些原因引起的无法正常运行
 
++ features
+
+        支持搜索功能
+        
     
 ...
 
