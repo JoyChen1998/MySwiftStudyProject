@@ -37,14 +37,13 @@
 ### Twitter Client Demo (Smashtag)
 + Notes
 
-	1. 因为CS193p课程中无Twitter部分的代码，该demo无法完整完成。我clone了GitHub上的 mahkeeoh/Smashtag/ 的Twitter部分代码。可能存在因为其代码版本稍低以及别的一些原因引起的无法正常运行
-	
-	2. workspace文件包含了Smashtag和Twitter的framework，启动它就可以打开该appDemo
+      1. 因为CS193p课程中无Twitter部分的代码，该demo无法完整完成。我clone了GitHub上的 mahkeeoh/Smashtag/ 的Twitter部分代码。可能存在因为其代码 版本稍低以及别的一些原因引起的无法正常运行
+      
+	  2. workspace文件包含了Smashtag和Twitter的framework，启动它就可以打开该appDemo
 
 + features
 
 	支持搜索功能 --7/11/2018
-
 	
         
         
