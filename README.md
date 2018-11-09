@@ -1,6 +1,6 @@
 # MySwiftStudyProject
 
-这是我记录的一些学习Swift时，照着做的一些简易app样例。学习的课程来自 Stanford 公开课CS193p  
+这是我记录的一些学习Swift时，照着做的一些简易app样例。学习的课程来自 Stanford 公开课 CS193p Taught by Paul Hegarty
 
 版本： ` Swift 4 ` , ` Xcode 10 `
 
@@ -37,9 +37,9 @@
 ### Twitter Client Demo (Smashtag)
 + Notes
 
-      1. 因为CS193p课程中无Twitter部分的代码，该demo无法完整完成。我clone了GitHub上的 mahkeeoh/Smashtag/ 的Twitter部分代码。但可能因为其代码的版本稍低无法正常运行
+      1. 因为CS193p课程中无Twitter部分的代码，该demo无法完整完成。我clone了GitHub上的 mahkeeoh/Smashtag/ 的Twitter部分代码。但可能因为其代码的版本稍低而在你的Xcode上无法正常运行
       2. workspace文件包含了Smashtag和Twitter的framework，启动它就可以打开该appDemo
-      3. 该Twitter文件有可能失去Grant，因此无法进行登陆等操作
+      3. 你使用该Twitter文件的时候有可能已经失去了Grant，因此无法进行登录读取等操作
 
 + features
 
