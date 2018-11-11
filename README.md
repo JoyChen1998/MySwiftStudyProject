@@ -39,12 +39,13 @@
 
       1. 因为CS193p课程中无Twitter部分的代码，该demo无法完整完成。我clone了GitHub上的 mahkeeoh/Smashtag/ 的Twitter部分代码。但可能因为其代码的版本稍低而在你的Xcode上无法正常运行
       2. workspace文件包含了Smashtag和Twitter的framework，启动它就可以打开该appDemo
-      3. 你使用该Twitter文件的时候有可能已经失去了Grant，因此无法进行登录读取等操作
+      3. 你使用该Twitter文件的时候可能已经失去了Grant，因此无法进行登录读取等操作
 
 + features
 
 	完成UI界面（Table View -> Subtitle） --8/11/2018
-
+	完成搜索功能(但还存在bug) --11/11/2018
+	完成界面（Table View Change to -> Custom & And Image, Text ） --8/11/2018
         
         
     
