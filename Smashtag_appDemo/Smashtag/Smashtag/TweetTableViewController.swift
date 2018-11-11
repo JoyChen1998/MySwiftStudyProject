@@ -8,7 +8,7 @@
 
 import UIKit
 import Twitter
-class TweetTableViewController: UITableViewController {
+class TweetTableViewController: UITableViewController, UITextFieldDelegate {
 
     private var tweets = [Array<Twitter.Tweet>]() {
         didSet {
@@ -18,6 +18,8 @@ class TweetTableViewController: UITableViewController {
 //
     var searchText : String?{
         didSet {
+            searchTextField?.text = searchText
+            searchTextField?.resignFirstResponder()
             tweets.removeAll()
             tableView.reloadData()
             searchForTweets()
@@ -51,6 +53,8 @@ class TweetTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.estimatedRowHeight = tableView.rowHeight
+        tableView.rowHeight = UITableView.automaticDimension
         searchText = "#stanford"
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -59,6 +63,18 @@ class TweetTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
+    @IBOutlet weak var searchTextField: UITextField! {
+        didSet {
+            searchTextField.delegate = self
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == searchTextField {
+            searchText = searchTextField.text
+        }
+        return true
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -76,8 +92,11 @@ class TweetTableViewController: UITableViewController {
 
         // Configure the cell...
         let tweet = tweets[indexPath.section][indexPath.row]
-        cell.textLabel?.text = tweet.text
-        cell.detailTextLabel?.text = tweet.user.name
+//        cell.textLabel?.text = tweet.text
+//        cell.detailTextLabel?.text = tweet.user.name
+        if let tweetCell = cell as? TweetTableViewCell {
+            tweetCell.tweet = tweet
+        }
         return cell
     }
 
