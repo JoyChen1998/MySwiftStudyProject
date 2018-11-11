@@ -44,8 +44,10 @@
 + features
 
 	完成UI界面（Table View -> Subtitle） --8/11/2018
+	
 	完成搜索功能(但还存在bug) --11/11/2018
-	完成界面（Table View Change to -> Custom & And Image, Text ） --8/11/2018
+	
+	完成界面（Table View Change to -> Custom & And Image, Text ） --11/11/2018
         
         
     
