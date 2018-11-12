@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17D25b" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Mention" representedClassName=".Mention" syncable="YES" codeGenerationType="category">
+        <attribute name="count" optional="YES" attributeType="Integer 16" defaultValueString="1" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="searchTerm" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="tweet" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tweet" inverseName="mention" inverseEntity="Tweet" syncable="YES"/>
+    </entity>
+    <entity name="Tweet" representedClassName=".Tweet" syncable="YES" codeGenerationType="category">
+        <attribute name="unique" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="mention" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Mention" inverseName="tweet" inverseEntity="Mention" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Mention" positionX="241" positionY="9" width="128" height="105"/>
+        <element name="Tweet" positionX="-63" positionY="-18" width="128" height="75"/>
+    </elements>
+</model>

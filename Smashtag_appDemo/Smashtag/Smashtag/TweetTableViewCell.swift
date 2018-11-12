@@ -2,46 +2,37 @@
 //  TweetTableViewCell.swift
 //  Smashtag
 //
-//  Created by JoyChan on 2018/11/11.
-//  Copyright © 2018 JoyChans. All rights reserved.
+//  Created by CS193p Instructor on 2/8/17.
+//  Copyright © 2017 Stanford University. All rights reserved.
 //
 
 import UIKit
 import Twitter
-class TweetTableViewCell: UITableViewCell {
 
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//        // Initialization code
-//    }
-//
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-//
-//        // Configure the view for the selected state
-//    }
-    
+class TweetTableViewCell: UITableViewCell
+{
+    // outlets to the UI components in our Custom UITableViewCell
     @IBOutlet weak var tweetProfileImageView: UIImageView!
-    
     @IBOutlet weak var tweetCreatedLabel: UILabel!
-    
     @IBOutlet weak var tweetUserLabel: UILabel!
-    
     @IBOutlet weak var tweetTextLabel: UILabel!
+
+    // public API of this UITableViewCell subclass
+    // each row in the table has its own instance of this class
+    // and each instance will have its own tweet to show
+    // as set by this var
+    var tweet: Twitter.Tweet? { didSet { updateUI() } }
     
-    var tweet: Twitter.Tweet? {
-        didSet {
-            updateUI()
-        }
-    }
-    
+    // whenever our public API tweet is set
+    // we just update our outlets using this method
     private func updateUI() {
-        tweetTextLabel?.text = tweet?.text
+        tweetTextLabel?.attributedText = highlightedMentionsText(tweet)
         tweetUserLabel?.text = tweet?.user.description
-        
         if let profileImageURL = tweet?.user.profileImageURL {
             if let imageData = try? Data(contentsOf: profileImageURL) {
-                tweetProfileImageView?.image = UIImage(data: imageData)
+                DispatchQueue.main.async { [weak self] in
+                    self?.tweetProfileImageView?.image = UIImage(data: imageData)
+                }
             }
         } else {
             tweetProfileImageView?.image = nil
@@ -58,5 +49,28 @@ class TweetTableViewCell: UITableViewCell {
         } else {
             tweetCreatedLabel?.text = nil
         }
+    }
+    
+    private struct Colors {
+        static let userMention = UIColor.green
+        static let hashtag = UIColor.orange
+        static let URL = UIColor.blue
+    }
+    
+    private func highlightedMentionsText(_ tweet: Twitter.Tweet?) -> NSAttributedString? {
+        if let tweet = tweet {
+           let attributedText = NSMutableAttributedString(string: tweet.text)
+            for hashtags in tweet.hashtags {
+                attributedText.addAttribute(NSForegroundColorAttributeName, value: Colors.hashtag, range: hashtags.nsrange)
+            }
+            for userMentions in tweet.userMentions {
+                attributedText.addAttribute(NSForegroundColorAttributeName, value: Colors.userMention, range: userMentions.nsrange)
+            }
+            for URLs in tweet.urls {
+                attributedText.addAttribute(NSForegroundColorAttributeName, value: Colors.URL, range: URLs.nsrange)
+            }
+            return attributedText
+        }
+        return nil
     }
 }
