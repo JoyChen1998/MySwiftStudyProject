@@ -37,20 +37,19 @@
 ### Twitter Client Demo (Smashtag)
 + Notes
 
-      1. 因为CS193p课程中无Twitter部分的代码，该demo无法完整完成。我clone了GitHub上的 mahkeeoh/Smashtag/ 的Twitter部分代码。但可能因为其代码的版本稍低而在你的Xcode上无法正常运行
-      2. workspace文件包含了Smashtag和Twitter的framework，启动它就可以打开该appDemo
-      3. 你使用该Twitter文件的时候可能已经失去了Grant，因此无法进行登录读取等操作
+      1. This demo cannot be completed because the Twitter framework code is not displayed on the CS193p. After that, I cloned Twitter's framework's Code on GitHub.com/mahkeeoh/Smashtag/ (Swift 3 version). 
+      2. The workspace include Smashtag & Twitter's framework，launch it can open this appDemo
+      3. iOS 11(or later) no longer supports using Twitter through the built-in social framework. So, this demo can't run on my simulator. 
 
 + features
 
 	完成UI界面（Table View -> Subtitle） --8/11/2018
 	
-	完成搜索功能(但还存在bug) --11/11/2018
+	完成搜索功能(但因为无法获取grant，因此无法实现) --11/11/2018
 	
 	完成界面（Table View Change to -> Custom & And Image, Text ） --11/11/2018
-        
-        
-    
+	
+	添加Core Data，from github --12/11/2018
 ...
 
 持续更新
