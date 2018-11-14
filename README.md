@@ -2,14 +2,18 @@
 
 这是我记录的一些学习Swift时，学习的一些简易app样例。
 
-#### 学习的课程有
+代码版本： ` Swift 4 ` , ` Xcode 10 `
+
+使用apps中的文件时，记得看` Main.storyboard `中的` ViewController `调用的是哪个class，并不是自带的` ViewController.swift ` 
+
+---
+
+#### 学习的课程
  
  + Stanford 公开课 CS193p Taught by Paul Hegarty
  
+ ...
 
-我所使用的版本： ` Swift 4 ` , ` Xcode 10 `
-
-使用apps中的文件时，记得看` Main.storyboard `中的` ViewController `调用的是哪个class，并不是自带的` ViewController.swift ` 
 
 ---
 
@@ -55,6 +59,7 @@
 	完成界面（Table View Change to -> Custom & And Image, Text ） --11/11/2018
 	
 	添加Core Data，from github --12/11/2018
+	
 ...
 
 持续更新
