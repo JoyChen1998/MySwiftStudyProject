@@ -1,14 +1,13 @@
 # MySwiftStudyProject
 
-这是我记录的一些学习Swift时，学习的一些简易app样例。
+这是我记录的一些学习Swift时，照着课程所做的一些简易app样例。
 
 代码版本： ` Swift 4 ` , ` Xcode 10 `
 
-使用apps中的文件时，记得看` Main.storyboard `中的` ViewController `调用的是哪个class，并不是自带的` ViewController.swift ` 
 
 ---
 
-#### 学习的课程
+## 学习的课程
  
  + Stanford 公开课 CS193p Taught by Paul Hegarty
  
