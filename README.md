@@ -17,6 +17,11 @@
 ---
 
 ## 样例
+### 翻牌记分(Concentration)
++ features
+
+	翻牌记分，点击变换图像，入门级appDemo
+	
 ### 简易计算器(Calculator)
 + features
 
