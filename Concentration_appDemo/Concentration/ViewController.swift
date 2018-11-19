@@ -31,6 +31,7 @@ class ViewController: UIViewController {
         if let cardNumber = cardButtons.index(of: sender) {
 //            flipCard(withEmoji: emojiChoices[cardNumber], on: sender)
             game.chooseCard(at: cardNumber)
+            print("chosen card was in cardButtons")
             updateViewFromModel()
         } else {
             print("chosen card was not in cardButtons")
@@ -49,7 +50,7 @@ class ViewController: UIViewController {
                 button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
             } else {
                 button.setTitle("", for: UIControl.State.normal)
-                button.backgroundColor = card.isMatched ? #colorLiteral(red: 1, green: 0.5437994599, blue: 0.2595592439, alpha: 0) : #colorLiteral(red: 1, green: 0.7066902518, blue: 0, alpha: 1)
+                button.backgroundColor = card.isMatched ? #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 0) : #colorLiteral(red: 1, green: 0.7066902518, blue: 0, alpha: 1)
             }
         }
     }
