@@ -17,35 +17,41 @@
 ---
 
 ## 样例
-### 翻牌记分(Concentration)
+### 翻牌游戏(类似连连看)(Concentration)
 + features
 
-	翻牌记分，点击变换图像，入门级appDemo
+	入门级appDemo
+	
+	翻牌就记分，点击变换图像
+	
+	实现类似连连看功能，配对相同则两张牌消失 (but do not give the cards a shuffle)
+	
+	fix bug on 11/20/2018
 	
 ### 简易计算器(Calculator)
 + features
 
 	整数带加减法，开方和三角函数cos计算，你可在此基础上增加
 
-	将开方运算更改为闭包方式  -- 29/10/2018
+	将开方运算更改为闭包方式  -- 10/29/2018
 
 ### UI画笑脸  (Faceit)
 + features
 
 	使用线条画出的笑脸。
 
-	支持缩放，变换表情，睁/闭眼，改变颜色  --27/10/2018
+	支持缩放，变换表情，睁/闭眼，改变颜色  --10/27/2018
 
-	含有 Multiple MVCs，支持点击变换表情  --28/10/2018
+	含有 Multiple MVCs，支持点击变换表情  --10/28/2018
 
 ### 实时获取图片 (Cassini)
 + features
 
-	包含scrollview的zoom --29/10/2018
+	包含scrollview的zoom --10/29/2018
 
-	包含通过scroll 进行移动图片 --30/10/2018
+	包含通过scroll 进行移动图片 --10/30/2018
 
-	包含`MultiThreading`,点击图片不会因为下载图片而造成在Queue中等待(已将图片换为我站demo，因为课程中的图片下载太慢) --1/11/2018
+	包含`MultiThreading`,点击图片不会因为下载图片而造成在Queue中等待(已将图片换为我站demo，因为课程中的图片下载太慢) --11/1/2018
 	
 ### Twitter Client Demo (Smashtag)
 + Notes
@@ -56,13 +62,13 @@
 
 + features
 
-	完成UI界面（Table View -> Subtitle） --8/11/2018
+	完成UI界面（Table View -> Subtitle） --11/8/2018
 	
 	完成搜索功能(但因为无法获取grant，因此无法实现) --11/11/2018
 	
 	完成界面（Table View Change to -> Custom & And Image, Text ） --11/11/2018
 	
-	添加Core Data，from github --12/11/2018
+	添加Core Data，from github --11/12/2018
 	
 ...
 
