@@ -24,7 +24,7 @@ class Concentration {
             } else {
                 // either no cards or 2 cards are faced up
                 for flipDownIndex in cards.indices {
-                    cards[flipDownIndex].isMatched = false
+                    cards[flipDownIndex].isFaceUp = false
                 }
                 cards[index].isFaceUp = true
                 indexOfOneAndOnlyFaceUpCard = index
