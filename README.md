@@ -26,32 +26,32 @@
 	
 	实现类似连连看功能，配对相同则两张牌消失 (but do not give the cards a shuffle)
 	
-	fix bug on 11/20/2018
+	fix bug on 2018-11-20
 	
 ### 简易计算器(Calculator)
 + features
 
 	整数带加减法，开方和三角函数cos计算，你可在此基础上增加
 
-	将开方运算更改为闭包方式  -- 10/29/2018
+	将开方运算更改为闭包方式  -- 2018-10-29
 
 ### UI画笑脸  (Faceit)
 + features
 
 	使用线条画出的笑脸。
 
-	支持缩放，变换表情，睁/闭眼，改变颜色  --10/27/2018
+	支持缩放，变换表情，睁/闭眼，改变颜色  --2018-10-27
 
-	含有 Multiple MVCs，支持点击变换表情  --10/28/2018
+	含有 Multiple MVCs，支持点击变换表情  --2018-10-28
 
 ### 实时获取图片 (Cassini)
 + features
 
-	包含scrollview的zoom --10/29/2018
+	包含scrollview的zoom --2018-10-29
 
-	包含通过scroll 进行移动图片 --10/30/2018
+	包含通过scroll 进行移动图片 --2018-10-30
 
-	包含`MultiThreading`,点击图片不会因为下载图片而造成在Queue中等待(已将图片换为我站demo，因为课程中的图片下载太慢) --11/1/2018
+	包含`MultiThreading`,点击图片不会因为下载图片而造成在Queue中等待(已将图片换为我站demo，因为课程中的图片下载太慢) --2018-11-1
 	
 ### Twitter Client Demo (Smashtag)
 + Notes
@@ -62,13 +62,13 @@
 
 + features
 
-	完成UI界面（Table View -> Subtitle） --11/8/2018
+	完成UI界面（Table View -> Subtitle） --2018-11-8
 	
-	完成搜索功能(但因为无法获取grant，因此无法实现) --11/11/2018
+	完成搜索功能(但因为无法获取grant，因此无法实现) --2018-11-11
 	
-	完成界面（Table View Change to -> Custom & And Image, Text ） --11/11/2018
+	完成界面（Table View Change to -> Custom & And Image, Text ） --2018-11-11
 	
-	添加Core Data，from github --11/12/2018
+	添加Core Data，from github --2018-11-12
 	
 ...
 
