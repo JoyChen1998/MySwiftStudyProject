@@ -24,7 +24,9 @@
 	
 	翻牌就记分，点击变换图像
 	
-	实现类似连连看功能，配对相同则两张牌消失 (but do not give the cards a shuffle)
+	实现类似连连看功能，配对相同则两张牌消失
+	
+	增加了StackView --2018-11-21
 	
 	fix bug on 2018-11-20
 	
