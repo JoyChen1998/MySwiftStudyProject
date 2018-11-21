@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     var flipCount = 0 {
         didSet {
             flipCountLabel.text = "Flips: \(flipCount)"
-            print("Flips: \(flipCount)")
+//            print("Flips: \(flipCount)")
         }
     }
 
@@ -31,10 +31,10 @@ class ViewController: UIViewController {
         if let cardNumber = cardButtons.index(of: sender) {
 //            flipCard(withEmoji: emojiChoices[cardNumber], on: sender)
             game.chooseCard(at: cardNumber)
-            print("chosen card was in cardButtons")
+//            print("chosen card was in cardButtons")
             updateViewFromModel()
         } else {
-            print("chosen card was not in cardButtons")
+//            print("chosen card was not in cardButtons")
         }
         
     }
