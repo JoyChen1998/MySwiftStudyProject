@@ -22,6 +22,8 @@
 
 	入门级appDemo
 	
+	Halloween Style UI 
+	
 	翻牌就记分，点击变换图像
 	
 	实现类似连连看功能，配对相同则两张牌消失
