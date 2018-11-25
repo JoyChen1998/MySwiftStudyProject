@@ -60,7 +60,7 @@
 ### Twitter Client Demo (Smashtag)
 + Notes
 
-      1. This demo cannot be completed because the Twitter framework code is not displayed on the CS193p. After that, I cloned Twitter's framework's Code on GitHub.com/mahkeeoh/Smashtag/ (Swift 3 version). 
+      1. This demo cannot be completed because the Twitter framework code is not displayed on the CS193p. After that, I cloned Twitter framework's Code on GitHub.com/mahkeeoh/Smashtag/ (Swift 3 version). 
       2. The workspace include Smashtag & Twitter's framework，launch it can open this appDemo
       *3. iOS 11(or later) no longer supports using Twitter through the built-in social framework.
 
