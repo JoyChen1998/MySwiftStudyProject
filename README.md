@@ -1,6 +1,6 @@
 # MySwiftStudyProject
 
-这是我记录的一些学习Swift时，照着课程所做的一些简易app样例。
+这是我记录的一些学习Swift时，按照所讲课程做的一些简易app样例。
 
 代码版本： ` Swift 4 ` , ` Xcode 10 `
 
