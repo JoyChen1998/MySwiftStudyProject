@@ -2,7 +2,7 @@
 
 这是我记录的一些学习Swift时，按照所讲课程做的一些简易app样例。
 
-代码版本： ` Swift 4 ` , ` Xcode 10 `
+代码版本： *` Swift 4 `* , *` Xcode 10 `*
 
 
 ---
@@ -72,12 +72,11 @@
 	
     完成界面（Table View Change to -> Custom & And Image, Text ） --2018-11-11
 	
-    添加Core Data，from github --2018-11-12
+    *Add `Core Data` , the other files are from github* --2018-11-12
 	
     
 
 ### Drop & Drag (EmojiArt)
-
 + features
 
     完成初步UI界面  --2018-11-27
