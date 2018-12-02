@@ -19,8 +19,6 @@
 ## 样例
 ### 翻牌游戏(类似连连看)(Concentration)
 + features
-
-    入门级appDemo
 	
     Halloween Style UI 
 	
@@ -51,11 +49,11 @@
 ### 实时获取图片 (Cassini)
 + features
 
-    包含scrollview的zoom --2018-10-29
+    包含scrollview的缩放 --2018-10-29
 
-    包含通过scroll 进行移动图片 --2018-10-30
+    包含通过`scroll`进行移动图片 --2018-10-30
 
-    包含`MultiThreading`,点击图片不会因为下载图片而造成在Queue中等待(已将图片换为我站demo，因为课程中的图片下载太慢) --2018-11-1
+    包含`MultiThreading`,点击图片不会因为下载图片而造成在Queue中等待(此处为`DispatchQueue`,已将图片换为我站demo，因为课程中的图片下载太慢) --2018-11-1
 	
 ### Twitter Client Demo (Smashtag)
 + Notes
@@ -65,28 +63,27 @@
       *3. iOS 11(or later) no longer supports using Twitter through the built-in social framework.
 
 + features
-
-    完成UI界面（Table View -> Subtitle） --2018-11-8
 	
     完成搜索功能(但因为无法获取grant，因此无法实现) --2018-11-11
 	
-    完成界面（Table View Change to -> Custom & And Image, Text ） --2018-11-11
+    完成界面（Table View 「 Custom & And Image, Text 」 ） --2018-11-11
 	
-    *Add `Core Data` , the other files are from github* --2018-11-12
+    Add `Core Data` , the other files are from github --2018-11-12
 	
     
 
 ### Drop & Drag (EmojiArt)
 + features
 
-    完成初步UI界面  --2018-11-27
+    完成UI界面（左端的Master View暂时没什么事情,可以左滑让其消失然后操作该appDemo）  --2018-11-27
     
-    可以将图片拖拽至`DropZone` --2018-11-27
+    可以将图片拖拽至`DropZone`了  --2018-11-27
     
-    分屏显示，增删条目（在iPad Simulator上横屏能完全显示（maybe 12.9"）） --2018-11-29
+    Master View分屏显示，增删条目（在iPad Simulator上横屏能完全显示（maybe 12.9"）） --2018-11-29
     
+    可以从顶部的CollectionView中拖emoji表情至下方的`DropZone`,也可以将别的图片拖至`DropZone`,按住option 调整其大小  --2018-12-1
     
-    
+    fix bugs -- 2018-12-2
 
 ...
 
