@@ -81,9 +81,9 @@
     
     可以将图片拖拽至`DropZone`了  --2018-11-27
     
+    可以将collection View上的emojis进行拖拽和放置进去 --2018-11-28
+    
     Master View分屏显示，增删条目（在iPad Simulator上横屏能完全显示（maybe 12.9"）） --2018-11-29
-   
-    Can drag emoji from the collectionView & sort them
     
     可以从顶部的CollectionView中拖emoji表情至下方的`DropZone`,也可以将别的图片拖至`DropZone`,按住option 调整其大小  --2018-12-1
     
