@@ -9,7 +9,7 @@
 
 ## 学习的课程
  
- + Stanford 公开课 CS193p Taught by Paul Hegarty
+ + Stanford CS193p Taught by Paul Hegarty
  
  ...
 
