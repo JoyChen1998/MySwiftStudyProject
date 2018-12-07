@@ -1,9 +1,11 @@
-///
-//  Utilities.swift
 //
-//  Created by CS193p Instructor.
-//  Copyright © 2017 Stanford University. All rights reserved.
+//  ImageFetcher.swift
+//  EmojiArt
 //
+//  Created by JoyChan on 2018/11/29.
+//  Copyright © 2018 JoyChans. All rights reserved.
+//
+
 import UIKit
 
 class ImageFetcher
@@ -118,7 +120,7 @@ extension UIImage
     }
     
     func storeLocallyAsJPEG(named name: String) -> URL? {
-        if let imageData = self.jpegData(compressionQuality: 1.0) {
+        if let imageData = UIImageJPEGRepresentation(self, 1.0) {
             if let url = UIImage.urlToStoreLocallyAsJPEG(named: name) {
                 do {
                     try imageData.write(to: url)
@@ -129,15 +131,6 @@ extension UIImage
             }
         }
         return nil
-    }
-    
-    func scaled(by factor: CGFloat) -> UIImage? {
-        let newSize = CGSize(width: size.width * factor, height: size.height * factor)
-        UIGraphicsBeginImageContext(newSize)
-        draw(in: CGRect(origin: CGPoint.zero, size: newSize))
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return image
     }
 }
 
@@ -173,7 +166,7 @@ extension NSAttributedString {
 }
 
 extension String {
-    func attributedString(withTextStyle style: UIFont.TextStyle, ofSize size: CGFloat) -> NSAttributedString {
+    func attributedString(withTextStyle style: UIFontTextStyle, ofSize size: CGFloat) -> NSAttributedString {
         let font = UIFontMetrics(forTextStyle: .body).scaledFont(for: UIFont.preferredFont(forTextStyle: .body).withSize(size))
         return NSAttributedString(string: self, attributes: [.font:font])
     }
@@ -220,18 +213,5 @@ extension UIView {
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return image
-    }
-}
-
-extension UIDocument.State: CustomStringConvertible {
-    public var description: String {
-        return [
-            UIDocument.State.normal.rawValue:".normal",
-            UIDocument.State.closed.rawValue:".closed",
-            UIDocument.State.inConflict.rawValue:".inConflict",
-            UIDocument.State.savingError.rawValue:".savingError",
-            UIDocument.State.editingDisabled.rawValue:".editingDisabled",
-            UIDocument.State.progressAvailable.rawValue:".progressAvailable"
-            ][rawValue] ?? String(rawValue)
     }
 }
