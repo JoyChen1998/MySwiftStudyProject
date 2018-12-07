@@ -89,6 +89,8 @@
     
     增加UIDocument,DocumentBrowser --2018-12-5
     
+    修改左部MasterView,利用其进行扩展 --2018-12-7
+    
     fix bugs -- 2018-12-2
 
 ...
