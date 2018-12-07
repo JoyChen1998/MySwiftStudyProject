@@ -87,6 +87,8 @@
     
     可以从顶部的CollectionView中拖emoji表情至下方的`DropZone`,也可以将别的图片拖至`DropZone`,按住option 调整其大小  --2018-12-1
     
+    增加UIDocument,DocumentBrowser --2018-12-5
+    
     fix bugs -- 2018-12-2
 
 ...
