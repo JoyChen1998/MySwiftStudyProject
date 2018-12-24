@@ -2,8 +2,8 @@
 //  TextFieldCollectionViewCell.swift
 //  EmojiArt
 //
-//  Created by JoyChan on 2018/11/29.
-//  Copyright © 2018 JoyChans. All rights reserved.
+//  Created by CS193p Instructor.
+//  Copyright © 2017 CS193p Instructor. All rights reserved.
 //
 
 import UIKit
@@ -13,6 +13,9 @@ class TextFieldCollectionViewCell: UICollectionViewCell, UITextFieldDelegate {
     @IBOutlet weak var textField: UITextField! {
         didSet {
             textField.delegate = self
+            // there are not in Demo
+            textField.inputAssistantItem.leadingBarButtonGroups = []
+            textField.inputAssistantItem.trailingBarButtonGroups = []
         }
     }
     
@@ -26,5 +29,4 @@ class TextFieldCollectionViewCell: UICollectionViewCell, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
-    
 }

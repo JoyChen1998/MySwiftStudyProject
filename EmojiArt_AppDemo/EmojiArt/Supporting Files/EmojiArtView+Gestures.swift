@@ -2,13 +2,14 @@
 //  EmojiArtView+Gestures.swift
 //  EmojiArt
 //
-//  Created by JoyChan on 2018/11/29.
-//  Copyright © 2018 JoyChans. All rights reserved.
+//  Created by CS913p Instructor.
+//  Copyright © 2017 Stanford University. All rights reserved.
 //
 
 import UIKit
 
 // Gesture Recognition Extension to EmojiArtView
+
 extension EmojiArtView
 {
     func addEmojiArtGestureRecognizers(to view: UIView) {
@@ -16,7 +17,7 @@ extension EmojiArtView
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.selectSubview(by:))))
         view.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(self.selectAndMoveSubview(by:))))
     }
-    
+
     var selectedSubview: UIView? {
         get { return subviews.filter { $0.layer.borderWidth > 0 }.first }
         set {
@@ -29,7 +30,7 @@ extension EmojiArtView
             }
         }
     }
-    
+
     @objc func selectSubview(by recognizer: UITapGestureRecognizer) {
         if recognizer.state == .ended {
             selectedSubview = recognizer.view
