@@ -77,19 +77,19 @@
 ### Drop & Drag (EmojiArt)
 + features
 
-    完成UI界面（左端的Master View暂时没什么事情,可以左滑让其消失然后操作该appDemo）  --2018-11-27
+    已经更新至UIDocumentBrowserViewController  --2018-12-24
     
     可以将图片拖拽至`DropZone`了  --2018-11-27
     
     可以将collection View上的emojis进行拖拽和放置进去 --2018-11-28
     
-    Master View分屏显示，增删条目（在iPad Simulator上横屏能完全显示（maybe 12.9"）） --2018-11-29
+    ~~Master View分屏显示 ,~~增删条目（在iPad Simulator上横屏能完全显示（maybe 12.9"）） --2018-11-29
     
     可以从顶部的CollectionView中拖emoji表情至下方的`DropZone`,也可以将别的图片拖至`DropZone`,按住option 调整其大小  --2018-12-1
     
-    增加UIDocument,DocumentBrowser --2018-12-5
+    可以将背景图片和emojis合成的图片save，然后可以将其生成一个新图片并可以保存为一个json文件  --2018-12-24
     
-    修改左部MasterView,利用其进行扩展 --2018-12-7
+    支持iPhone打开和修改该图片，并保存在iCloud上 --2018-12-24
     
     fix bugs -- 2018-12-2
 
