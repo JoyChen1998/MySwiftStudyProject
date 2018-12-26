@@ -92,6 +92,8 @@
     支持iPhone打开和修改该图片，并保存在iCloud上 --2018-12-24
     
     fix bugs -- 2018-12-2
+    
+    add Alert & Notifications --2018-12-26 (另用了一个demo)
 
 ...
 
