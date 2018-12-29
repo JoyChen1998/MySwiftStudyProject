@@ -94,6 +94,8 @@
     fix bugs -- 2018-12-2
     
     add Alert & Notifications --2018-12-26 (另用了一个demo)
+    
+    more Segues
 
 ...
 
