@@ -89,13 +89,13 @@
     
     可以将背景图片和emojis合成的图片save，然后可以将其生成一个新图片,并可以保存为一个json文件  --2018-12-24
     
-    支持iPhone打开和修改该图片 --2018-12-24
+    支持iPhone打开和修改该图片(iCloud Kit) --2018-12-24
     
     fix bugs -- 2018-12-2
     
     add Alert & Notifications --2018-12-26 (另用了一个demo)
     
-    more Segues
+    more Segues -- 2019-1-5
 
 ...
 
