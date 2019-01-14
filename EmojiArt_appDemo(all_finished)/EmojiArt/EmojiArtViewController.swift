@@ -6,10 +6,41 @@
 //  Copyright © 2017 CS193p Instructor. All rights reserved.
 //
 
-import UIKit
+import UIKit 
 
-class EmojiArtViewController: UIViewController, UIDropInteractionDelegate, UIScrollViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDragDelegate, UICollectionViewDropDelegate
+class EmojiArtViewController: UIViewController, UIDropInteractionDelegate, UIScrollViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDragDelegate, UICollectionViewDropDelegate, UIPopoverPresentationControllerDelegate
 {
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Show Document Info" {
+            if let destination = segue.destination.contents as? DocumentInfoViewController {
+                document?.thumbnail = emojiArtView.snapshot
+                destination.document = document
+                if let ppc = destination.popoverPresentationController{
+                    ppc.delegate = self
+                }
+            }
+        } else if segue.identifier == "Embed Document Info" {
+            embeddedDocInfo = segue.destination.contents as? DocumentInfoViewController
+        }
+    }
+    
+    private var embeddedDocInfo: DocumentInfoViewController?
+    
+    func adaptivePresentationStyle(
+        for controller: UIPresentationController,
+        traitCollection: UITraitCollection
+        ) -> UIModalPresentationStyle {
+        return .none
+    }
+    
+    @IBAction func close(bySegue: UIStoryboardSegue) {
+        close()
+    }
+    
+    
+    @IBOutlet weak var embeddedDocInfoHeight: NSLayoutConstraint!
+    @IBOutlet weak var embeddedDocInfoWidth: NSLayoutConstraint!
     // MARK: - Model
     
     // computed property for our Model
@@ -70,7 +101,7 @@ class EmojiArtViewController: UIViewController, UIDropInteractionDelegate, UIScr
         }
     }
     
-    @IBAction func close(_ sender: UIBarButtonItem) {
+    @IBAction func close(_ sender: UIBarButtonItem? = nil) {
         // MODIFIED AFTER LECTURE 14
         // the call to save() that used to be here has been removed
         // because we no longer explicitly save our document
@@ -90,7 +121,7 @@ class EmojiArtViewController: UIViewController, UIDropInteractionDelegate, UIScr
         }
         // dismiss ourselves from having been presented modally
         // and when we're done, close our document
-        dismiss(animated: true) {
+        presentingViewController?.dismiss(animated: true) {
             self.document?.close{ success in
                 if let observer = self.documentObserver {
                     NotificationCenter.default.removeObserver(observer)
@@ -112,6 +143,11 @@ class EmojiArtViewController: UIViewController, UIDropInteractionDelegate, UIScr
             queue: OperationQueue.main,
             using: { notification in
                 print("document state changed to \(self.document!.documentState)")
+                if self.document!.documentState == .normal, let docInfoVC = self.embeddedDocInfo {
+                    docInfoVC.document = self.document
+                    self.embeddedDocInfoWidth.constant = docInfoVC.preferredContentSize.width
+                    self.embeddedDocInfoHeight.constant = docInfoVC.preferredContentSize.height
+                }
         })
         document?.open { success in
             if success {

@@ -36,8 +36,31 @@ class DocumentInfoViewController: UIViewController {
             }
         }
         
-        if thumbnailImageView != nil, let thumbnail = document?.thumbnail {
+        if thumbnailImageView != nil, thumbnailAspectRatio != nil, let thumbnail = document?.thumbnail {
             thumbnailImageView.image = thumbnail
+            thumbnailImageView.removeConstraint(thumbnailAspectRatio)
+            thumbnailAspectRatio = NSLayoutConstraint(
+                item: thumbnailImageView,
+                attribute: .width,
+                relatedBy: .equal,
+                toItem: thumbnailImageView,
+                attribute: .height,
+                multiplier: thumbnail.size.width / thumbnail.size.height,
+                constant: 0
+            )
+            thumbnailImageView.addConstraint(thumbnailAspectRatio)
+        }
+        if presentationController is UIPopoverPresentationController {
+            thumbnailImageView?.isHidden = true
+            returnToDoucumentButton?.isHidden = true
+            view.backgroundColor = .clear
+        }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        if let fittedSize = topLevelView?.sizeThatFits(UILayoutFittingCompressedSize) {
+            preferredContentSize = CGSize(width: fittedSize.width + 30, height: fittedSize.height + 30)
         }
     }
     
@@ -45,7 +68,10 @@ class DocumentInfoViewController: UIViewController {
         presentingViewController?.dismiss(animated: true)
         
     }
+    @IBOutlet weak var returnToDoucumentButton: UIButton!
+    @IBOutlet weak var topLevelView: UIStackView!
     @IBOutlet weak var thumbnailImageView: UIImageView!
     @IBOutlet weak var sizeLabel: UILabel!
     @IBOutlet weak var createdLabel: UILabel!
+    @IBOutlet weak var thumbnailAspectRatio: NSLayoutConstraint!
 }
