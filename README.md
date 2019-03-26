@@ -9,7 +9,7 @@
 
 ## 学习的课程
  
- + Stanford CS193p Taught by Paul Hegarty
+ + Stanford CS193p Taught by Paul Hegarty 
  
  ...
 
@@ -95,7 +95,7 @@
 
 ...
 
-持续更新
+~~持续更新~~  ->  开始复习之旅，暂时停更~ 
 ---
 
 对此存在疑惑或者代码出现了问题？欢迎大佬提出issues指正。
